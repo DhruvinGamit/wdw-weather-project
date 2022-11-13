@@ -6,7 +6,6 @@ const weatherApi = {
 }
 
 const searchInputBox = document.getElementById('input-box');
-
 // Event Listener Function on keypress
 searchInputBox.addEventListener('keypress', (event) => {
     
@@ -15,6 +14,12 @@ searchInputBox.addEventListener('keypress', (event) => {
         getWeatherReport(searchInputBox.value);
         document.querySelector('.weather-body').style.display = "block";
     }
+
+});
+document.getElementById("search-key").addEventListener('click', (event) => {
+    
+    getWeatherReport(searchInputBox.value);
+    document.querySelector('.weather-body').style.display = "block";
 
 });
 
@@ -95,5 +100,7 @@ function dateManage(dateArg) {
 
     return `${date} ${month} (${day}), ${year}`;
 }
+
+
 
 
